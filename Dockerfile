@@ -7,7 +7,7 @@ RUN set -ex\
     && apt autoremove -y
 RUN set -ex\
     && DEBIAN_FRONTEND=noninteractive apt-get -y install tzdata \
-    && apt-get install -y --no-install-recommends gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libc-ares-dev automake
+    && apt-get install -y --no-install-recommends gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libc-ares-dev automake make
 
 COPY entrypoint.sh /entrypoint.sh   
 RUN chmod +x /entrypoint.sh
