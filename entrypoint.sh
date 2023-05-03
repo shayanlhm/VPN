@@ -136,8 +136,6 @@ get_cert(){
         fi
         apt-get install -y certbot 
         certbot certonly --cert-name $domain -d $domain --standalone --agree-tos --register-unsafely-without-email
-        systemctl enable certbot.timer
-        systemctl start certbot.timer
         if [ ! -f /etc/letsencrypt/live/$domain/fullchain.pem ];then
             echo "\033[1;31mFailed to get cert.\033[0m"
             exit 1
