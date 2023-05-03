@@ -30,7 +30,7 @@ sed -e "/^#/d"\
     -e "s|\${QR_Path}|${QR_Path}|g"\
     -e "$s"\
     /conf/nginx_ss.conf > /etc/nginx/conf.d/ss.conf 
-Domain='my5.frnom.ir'
+Domain='my6.frnom.ir'
 if [ "${Domain}" = "no" ]; then
   echo "Aditya's Personal VPN"
 else
