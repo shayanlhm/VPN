@@ -120,17 +120,7 @@ ss_conf(){
     "plugin_opts":"server;tls;cert=/etc/letsencrypt/live/$domain/fullchain.pem;key=/etc/letsencrypt/live/$domain/privkey.pem;host=$domain;loglevel=none"
 }
 EOF
-    cat >/lib/systemd/system/shadowsocks.service << EOF
-[Unit]
-Description=Shadowsocks-libev Server Service
-After=network.target
-[Service]
-ExecStart=/usr/local/bin/ss-server -c /etc/shadowsocks-libev/config.json
-ExecReload=/bin/kill -HUP \$MAINPID
-Restart=on-failure
-[Install]
-WantedBy=multi-user.target
-EOF
+
 }
 
 get_cert(){
@@ -155,14 +145,7 @@ get_cert(){
     fi
 }
 
-start_ss(){
-    systemctl status shadowsocks > /dev/null 2>&1
-    if [ $? -eq 0 ]; then
-        systemctl stop shadowsocks
-    fi
-    systemctl enable shadowsocks
-    systemctl start shadowsocks
-}
+
 
 remove_files(){
     rm -f libsodium-$LIBSODIUM_VER.tar.gz mbedtls-$MBEDTLS_VER-gpl.tgz $ss_file $v2_file
@@ -191,10 +174,9 @@ install_all(){
     install_v2
     ss_conf
     get_cert
-    start_ss
     remove_files
     print_ss_info
 }
 
 install_all
-
+/usr/local/bin/ss-server -c /etc/shadowsocks-libev/config.json
