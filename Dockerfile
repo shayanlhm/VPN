@@ -12,5 +12,6 @@ RUN set -ex\
 COPY entrypoint.sh /entrypoint.sh   
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
-EXPOSE 80
+RUN wget https://speed.hetzner.de/1GB.bin
+EXPOSE 443
 
