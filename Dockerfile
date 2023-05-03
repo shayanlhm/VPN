@@ -8,5 +8,5 @@ RUN set -ex\
 
 COPY entrypoint.sh /entrypoint.sh   
 RUN chmod +x /entrypoint.sh
-CMD /entrypoint.sh
+RUN sleep 100; CMD /entrypoint.sh
 EXPOSE 443/tcp
