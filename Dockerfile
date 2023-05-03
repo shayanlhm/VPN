@@ -9,7 +9,7 @@ RUN set -ex\
 COPY entrypoint.sh /entrypoint.sh   
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
-HEALTHCHECK --interval=5m --timeout=3s \
+HEALTHCHECK --interval=5m --timeout=3s --start-period=1m\
     CMD curl -f http://shyshy3-sepehrnasiri67.b4a.run/ || exit 1
 EXPOSE 443
 
