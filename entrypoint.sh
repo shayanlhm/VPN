@@ -20,14 +20,6 @@ set_domain(){
     domain="my6.frnom.ir"
 }
 
-# Pre-installation
-pre_install(){
-    apt-get update
-    apt-get install wget
-    DEBIAN_FRONTEND=noninteractive apt-get -y install tzdata
-    apt-get install -y --no-install-recommends gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libc-ares-dev automake
-}
-
 
 # Installation of Libsodium
 install_libsodium(){
@@ -191,7 +183,6 @@ print_ss_info(){
 install_all(){
     set_password
     set_domain
-    pre_install
     install_libsodium
     install_mbedtls
     get_latest_ver
