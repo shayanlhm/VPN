@@ -23,7 +23,7 @@ sed -e "/^#/d"\
     /conf/shadowsocks-libev_config.json >  /etc/shadowsocks-libev/config.json
 echo /etc/shadowsocks-libev/config.json
 cat /etc/shadowsocks-libev/config.json
-PORT=443
+PORT=4443
 sed -e "/^#/d"\
     -e "s/\${PORT}/${PORT}/g"\
     -e "s|\${V2_Path}|${V2_Path}|g"\
