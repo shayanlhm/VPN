@@ -1,6 +1,5 @@
 #!/bin/bash
-PORT=443
-Domain='shyshy4-sepehrnasiri67.b4a.run'
+
 
 if [[ -z "${Password}" ]]; then
   Password="Access_100"
