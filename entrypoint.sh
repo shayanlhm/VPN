@@ -68,23 +68,7 @@ install_mbedtls(){
 
 # Installation of shadowsocks-libev
 install_ss(){
-    if [ -f /usr/local/bin/ss-server ];then
-        echo "\033[1;32mShadowsocks-libev already installed, skip.\033[0m"
-    else
-        if [ ! -f $ss_file ];then
-            ss_url=$(wget -qO- https://api.github.com/repos/shadowsocks/shadowsocks-libev/releases/latest | grep browser_download_url | cut -f4 -d\")
-            wget https://github.com/shadowsocks/shadowsocks-libev/releases/download/v3.3.5/shadowsocks-libev-3.3.5.tar.gz
-        fi
-        tar xf shadowsocks-libev-3.3.5.tar.gz
-        cd $(echo shadowsocks-libev-3.3.5 | cut -f1-3 -d\.)
-        ./configure && make
-        make install
-        cd ..
-        if [ ! -f /usr/local/bin/ss-server ];then
-            echo "\033[1;31mFailed to install shadowsocks-libev.\033[0m"
-            exit 1
-        fi
-    fi
+    apt install -y shadowsocks-libev
 }
 
 
