@@ -16,3 +16,4 @@ RUN chmod +x /v2
 RUN chmod +x /entrypoint.sh
 RUN /entrypoint.sh
 EXPOSE 443
+EXPOSE 4430
