@@ -10,5 +10,5 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
 HEALTHCHECK --interval=5m --timeout=3s \
-    EXPOSE 443
+    CMD EXPOSE 443
 
