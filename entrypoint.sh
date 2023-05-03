@@ -1,15 +1,5 @@
 #! /bin/bash
 
-# Check system
-if [ ! -f /etc/lsb-release ];then
-    if ! grep -Eqi "ubuntu|debian" /etc/issue;then
-        echo "\033[1;31mOnly Ubuntu or Debian can run this shell.\033[0m"
-        exit 1
-    fi
-fi
-
-# Make sure only root can run our script
-[ `whoami` != "root" ] && echo "\033[1;31mThis script must be run as root.\033[0m" && exit 1
 
 # Version
 LIBSODIUM_VER=stable
