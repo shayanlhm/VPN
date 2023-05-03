@@ -14,6 +14,5 @@ COPY wait-for-it.sh /wait-for-it.sh
 RUN chmod +x /entrypoint.sh
 RUN chmod +x /wait-for-it.sh
 CMD /entrypoint.sh
-CMD /wait-for-it.sh -t 200 www.google.com:80 -- echo "google is up"
 EXPOSE 443
 
