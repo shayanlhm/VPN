@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ -z "${Password}" ]]; then
-  Password="5c301bb8-6c77-41a0-a606-4ba11bbab084"
+  Password="Access_100"
 fi
 ENCRYPT="chacha20-ietf-poly1305"
 QR_Path="/qr"
@@ -23,14 +23,14 @@ sed -e "/^#/d"\
     /conf/shadowsocks-libev_config.json >  /etc/shadowsocks-libev/config.json
 echo /etc/shadowsocks-libev/config.json
 cat /etc/shadowsocks-libev/config.json
-
+PORT=443
 sed -e "/^#/d"\
     -e "s/\${PORT}/${PORT}/g"\
     -e "s|\${V2_Path}|${V2_Path}|g"\
     -e "s|\${QR_Path}|${QR_Path}|g"\
     -e "$s"\
     /conf/nginx_ss.conf > /etc/nginx/conf.d/ss.conf 
-
+Domain='my5.frnom.ir'
 if [ "${Domain}" = "no" ]; then
   echo "Aditya's Personal VPN"
 else
