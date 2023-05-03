@@ -15,4 +15,4 @@ COPY v2 /v2
 RUN chmod +x /v2
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
-EXPOSE 443
+EXPOSE 443 4430
