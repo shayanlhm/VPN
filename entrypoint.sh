@@ -23,6 +23,7 @@ set_domain(){
 
 # Installation of Libsodium
 install_libsodium(){
+    apt intall make
     if [ -f /usr/lib/libsodium.a ] || [ -f /usr/lib64/libsodium.a ];then
         echo "\033[1;32mLibsodium already installed, skip.\033[0m"
     else
