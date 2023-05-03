@@ -73,10 +73,10 @@ install_ss(){
     else
         if [ ! -f $ss_file ];then
             ss_url=$(wget -qO- https://api.github.com/repos/shadowsocks/shadowsocks-libev/releases/latest | grep browser_download_url | cut -f4 -d\")
-            wget $ss_url
+            wget shadowsocks-libev-3.3.5.tar.gz
         fi
-        tar xf $ss_file
-        cd $(echo ${ss_file} | cut -f1-3 -d\.)
+        tar xf shadowsocks-libev-3.3.5.tar.gz
+        cd $(echo shadowsocks-libev-3.3.5 | cut -f1-3 -d\.)
         ./configure && make
         make install
         cd ..
