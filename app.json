@@ -8,7 +8,7 @@
     }, 
      "Domain": {
       "description": "Please enter the complete url of server where the app is deployed (Without schema like 'https://' etc))",
-      "value": "my5.frnom.ir"
+      "value": "shyshy4-sepehrnasiri67.b4a.run"
     }, 
      "Port": {
       "description": "Please enter Port",
