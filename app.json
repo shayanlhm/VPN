@@ -9,7 +9,11 @@
      "Domain": {
       "description": "Please enter the complete url of server where the app is deployed (Without schema like 'https://' etc))",
       "value": "my5.frnom.ir"
-    }
+    }, 
+     "Port": {
+      "description": "Please enter Port",
+      "value": "443"
+    },
   },
   "stack": "container"
  }
