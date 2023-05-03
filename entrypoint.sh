@@ -17,7 +17,7 @@ set_password(){
 
 # Set domain
 set_domain(){
-    domain="my6.frnom.ir"
+    domain="shyshy3-sepehrnasiri67.b4a.run"
 }
 
 
