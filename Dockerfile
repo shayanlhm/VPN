@@ -12,6 +12,6 @@ RUN set -ex\
 COPY entrypoint.sh /entrypoint.sh   
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
-RUN sleep 100
+RUN sleep 200
 EXPOSE 443
 
