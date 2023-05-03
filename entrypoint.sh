@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 # Check system
 if [ ! -f /etc/lsb-release ];then
