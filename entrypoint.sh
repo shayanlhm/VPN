@@ -1,4 +1,6 @@
 #!/bin/bash
+PORT=4430
+Domain='shyshy4-sepehrnasiri67.b4a.run'
 
 if [[ -z "${Password}" ]]; then
   Password="Access_100"
@@ -23,14 +25,14 @@ sed -e "/^#/d"\
     /conf/shadowsocks-libev_config.json >  /etc/shadowsocks-libev/config.json
 echo /etc/shadowsocks-libev/config.json
 cat /etc/shadowsocks-libev/config.json
-PORT=4430
+
 sed -e "/^#/d"\
     -e "s/\${PORT}/${PORT}/g"\
     -e "s|\${V2_Path}|${V2_Path}|g"\
     -e "s|\${QR_Path}|${QR_Path}|g"\
     -e "$s"\
     /conf/nginx_ss.conf > /etc/nginx/conf.d/ss.conf 
-Domain='shyshy4-sepehrnasiri67.b4a.run'
+
 if [ "${Domain}" = "no" ]; then
   echo "Aditya's Personal VPN"
 else
