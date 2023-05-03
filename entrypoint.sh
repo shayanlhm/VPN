@@ -22,8 +22,6 @@ set_domain(){
 
 # Pre-installation
 pre_install(){
-    read -p "Press any key to start the installation." a
-    echo "\033[1;34mStart installing. This may take a while.\033[0m"
     apt-get update
     apt-get install -y --no-install-recommends gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libc-ares-dev automake
 }
