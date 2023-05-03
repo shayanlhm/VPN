@@ -53,7 +53,7 @@ install_mbedtls(){
             wget https://github.com/Mbed-TLS/mbedtls/archive/refs/tags/mbedtls-2.16.5.tar.gz
         fi
         tar xf mbedtls-2.16.5.tar.gz
-        cd mbedtls-$MBEDTLS_VER
+        cd mbedtls-mbedtls-2.16.5
         make SHARED=1 CFLAGS=-fPIC
         make DESTDIR=/usr install
         cd ..
