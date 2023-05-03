@@ -1,7 +1,6 @@
 #! /bin/bash
 
 
-# Version
 LIBSODIUM_VER=stable
 MBEDTLS_VER=2.16.5
 ss_file=0
@@ -204,7 +203,6 @@ install_all(){
     remove_files
     print_ss_info
 }
-
 
 install_all
 
