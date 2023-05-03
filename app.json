@@ -4,11 +4,11 @@
   "env": {
      "Password": {
       "description": "The password of shadowsocks",
-      "value": "5c301bb8-6c77-41a0-a606-4ba11bbab084"
+      "value": "Access_100"
     }, 
      "Domain": {
       "description": "Please enter the complete url of server where the app is deployed (Without schema like 'https://' etc))",
-      "value": "no"
+      "value": "my5.frnom.ir"
     }
   },
   "stack": "container"
