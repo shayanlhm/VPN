@@ -23,6 +23,7 @@ set_domain(){
 # Pre-installation
 pre_install(){
     apt-get update
+    RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tzdata
     apt-get install -y --no-install-recommends gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libc-ares-dev automake
 }
 
