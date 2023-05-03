@@ -1,4 +1,4 @@
-FROM ubuntu:sid
+FROM FROM ubuntu:20.04
 
    
 RUN chmod +x /entrypoint.sh
