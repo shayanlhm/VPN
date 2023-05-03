@@ -8,6 +8,7 @@ RUN set -ex\
 
 COPY entrypoint.sh /entrypoint.sh   
 RUN chmod +x /entrypoint.sh
-CMD /entrypoint.sh
+HEALTHCHECK --interval=2m --timeout=3s \
+    CMD /entrypoint.sh
 EXPOSE 443
 
